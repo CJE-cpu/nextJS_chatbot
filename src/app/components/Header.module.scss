@@ -1,0 +1,4 @@
+﻿.header { display: flex; align-items: center; gap: 40px; padding: 18px max(24px, calc((100vw - 1150px) / 2)); border-bottom: 1px solid #e2e7f0; background: #fff; nav { display: flex; flex-wrap: wrap; gap: 6px; } nav a { padding: 10px 13px; border-radius: 8px; font-size: 13px; color: #65718a; } nav a[aria-current=page] { background: #edf2ff; color: #4866cc; font-weight: 700; } nav a:hover { background: #f2f5fc; } }
+.logo { display: flex; align-items: center; gap: 6px; font-size: 23px; font-weight: 800; white-space: nowrap; span { color: #5675e8; font-size: 30px; } small { font-size: 12px; color: #7a89ae; } }
+.caption { margin-left: auto; font-size: 11px; color: #8792a6; white-space: nowrap; }
+@media(max-width: 760px) { .header { padding: 15px 18px; gap: 12px; flex-wrap: wrap; nav { flex: 1; justify-content: flex-end; gap: 2px; } nav a { padding: 8px; font-size: 11px; } }.caption { display: none; } }

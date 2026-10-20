@@ -1,0 +1,79 @@
+.chatbot {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  color: #172033;
+
+  button { cursor: pointer; }
+  button:disabled { cursor: default; opacity: 0.6; }
+}
+
+.panel {
+  width: min(360px, calc(100vw - 48px));
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dbe2ec;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px #0002;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #eef3ff;
+  h3 { margin: 0; font-size: 16px; }
+  button { border: 0; background: transparent; padding: 8px; }
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min(320px, 45dvh);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.userMessage, .answer {
+  max-width: 85%;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.userMessage { align-self: flex-end; background: #2459d6; color: white; }
+.answer { align-self: flex-start; background: #f0f3f7; }
+
+.inputBox {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #dbe2ec;
+  input { min-width: 0; flex: 1; padding: 10px; border: 1px solid #cbd3e0; border-radius: 8px; }
+  button { padding: 10px; background: #2459d6; color: white; border: 0; border-radius: 8px; }
+}
+
+.toggle {
+  display: block;
+  margin-left: auto;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: #2459d6;
+  color: white;
+  font-size: 22px;
+}
+
+.shortcuts { display: flex; gap: 7px; padding: 12px 16px; border-bottom: 1px solid #e8edf5; a { padding: 6px 9px; background: #f3f6fc; border-radius: 6px; font-size: 11px; color: #687eaf; } }
+.header { background: #f0f4ff; h3 { font-size: 14px; color: #4f67a0; } }
+.messages { font-size: 13px; }.inputBox input { font-size: 13px; }.userMessage { background: #5675e8; }.answer { background: #f1f4fa; color: #596982; }
+.toggle { background: #5675e8; box-shadow: 0 5px 18px #3e5aac35; font-size: 27px; }
+.chatbot { bottom: max(20px, env(safe-area-inset-bottom)); }
+@media(max-width: 600px) { .chatbot { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); }.panel { width: min(380px, calc(100vw - 28px)); }.inputBox input { font-size: 16px; }.messages { height: min(300px, 40dvh); }.toggle { width: 46px; height: 46px; } }

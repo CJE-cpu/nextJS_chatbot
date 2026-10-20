@@ -1,0 +1,15 @@
+﻿.page { max-width: 900px; width: 100%; margin: auto; padding: 48px 24px 100px; color: #28344a; h2 { font-size: 18px; margin-bottom: 16px; } button { border: 1px solid #dce2ef; border-radius: 10px; background: white; padding: 12px 18px; color: #465b8c; } button:disabled { opacity: .55; cursor: default; } textarea { display: block; width: 100%; resize: vertical; min-height: 130px; padding: 16px; margin: 12px 0; border: 1px solid #dce2ef; border-radius: 10px; background: white; color: #28344a; line-height: 1.7; } label { display: block; font-size: 14px; font-weight: 600; } }
+.back { font-size: 13px; color: #687fae; }
+.title { margin: 36px 0; p { font-size: 12px; letter-spacing: 2px; color: #6d83bd; } h1 { font-size: clamp(26px, 5vw, 36px); margin: 14px 0; } span { font-size: 14px; line-height: 1.8; color: #8b96aa; } }
+.modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; button { text-align: left; padding: 22px 16px; } h3 { font-size: 16px; margin-bottom: 9px; } p { font-size: 12px; line-height: 1.8; color: #8b96aa; } button.selected { border-color: #647fe1; background: #edf2ff; } }
+.form { margin-top: 32px; }
+.actions { display: flex; align-items: center; justify-content: space-between; small { color: #9aa4b7; } button { background: #5675e8; color: white; border-color: #5675e8; } }
+.result { margin-top: 28px; padding: 24px; border: 1px solid #e1e6f1; background: white; border-radius: 14px; >p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.9; font-size: 14px; } label { margin-top: 24px; } }
+.error { background: #fff0ed; color: #af5a48; padding: 16px; border-radius: 10px; margin-top: 22px; line-height: 1.7; }
+.history { margin-top: 34px; p { color: #929caf; font-size: 12px; margin-bottom: 12px; } button { display: block; text-align: left; width: 100%; margin-top: 8px; overflow-wrap: anywhere; } }
+.note { margin-top: 30px; text-align: center; font-size: 11px; color: #9aa4b7; line-height: 1.8; }
+@media (max-width: 600px) { .page { padding: 28px 18px 100px; }.modes { grid-template-columns: 1fr; button { padding: 16px; } }.result { padding: 18px; } }
+
+.modeNumber { display: inline-block; font-size: 11px; font-weight: 700; color: #8394c2; letter-spacing: 2px; margin-bottom: 18px; }
+.page { margin-top: 0; }.page textarea { font-size: 15px; }.modes p { color: #70809a; }.history p, .note { color: #748099; }
+@media(max-width: 600px) { .page textarea { font-size: 16px; }.modeNumber { margin-bottom: 8px; } }
