@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
@@ -143,7 +143,7 @@ export default function Home() {
               <div className={styles.composerBottom}><span>✳ 모아 AI <small>· 생각을 이어주는 대화</small></span><div><small>{question.length ? `${question.length.toLocaleString()} / 6,000` : 'Enter로 전송'}</small><button type="submit" aria-label="질문 전송" disabled={loading || !restored || !question.trim()}>{loading ? '···' : '↑'}</button></div></div>
             </form>
             {error && <p className={styles.error} role="alert">{error}</p>}
-            <p className={styles.disclaimer}>모아 AI의 답변은 정확하지 않을 수 있어요. 중요한 정보는 한 번 더 확인해 주세요.</p>
+            <p className={styles.disclaimer}>모아 AI의 답변은 정확하지 않을 수 있어요. 질문과 최근 대화는 AI 제공업체로 전송되며, Gemini 무료 서비스에서는 제품 개선에 사용될 수 있어요. 개인정보나 비밀번호는 입력하지 마세요.</p>
             <div className={styles.footerNote}><span>✧ 당신의 가능성을 넓히는 작은 대화</span><span>MADE FOR YOUR EVERYDAY</span></div>
           </div>
         </main>

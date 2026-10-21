@@ -1,7 +1,10 @@
-import { reply } from '../../../../server/chat'
+import { reply, chatStatus } from '../../../../server/chat'
+
+export const runtime = 'nodejs'
+export const maxDuration = 60
 
 export function GET() {
-  return Response.json({ configured: Boolean(process.env.OPENAI_API_KEY) })
+  return Response.json(chatStatus(), { headers: { 'Cache-Control': 'no-store' } })
 }
 
 export function POST(request: Request) {

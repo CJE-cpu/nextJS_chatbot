@@ -12,7 +12,7 @@ type ChatMessage = {
 export default function GuideChatbot() {
   const [open, setOpen] = useState(false)
   const [message, setMessage] = useState<ChatMessage[]>([
-    { role: 'assistant', content: '안녕하세요! 홈페이지 이용 방법을 안내해 드립니다' },
+    { role: 'assistant', content: '안녕하세요! 홈페이지 이용 방법을 안내해 드립니다. 질문은 AI 제공업체로 전송되며 Gemini 무료 서비스에서는 제품 개선에 사용될 수 있어요. 개인정보는 입력하지 마세요.' },
   ])
   const [loading, setLoading] = useState(false)
   const [question, setQuestion] = useState('')
